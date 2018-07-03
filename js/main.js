@@ -58,7 +58,7 @@ function template(str, options) {
     }
     args.push('number');
     string += '";';
-    string += "for(var i = 0; i < number; i++) {console.log(string)};";
+    string += "for(var i = 0; i < number; i++) {document.querySelector('body').innerHTML += '<p>' + string + '</p>'};";
 
 
     return new Function(args, string);
